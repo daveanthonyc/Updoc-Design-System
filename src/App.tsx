@@ -4,7 +4,8 @@ function App() {
 
   return (
     <>
-        <Button size="sm" variant="primary">Consult Now</Button>
+        <Button size="md">Consult Now</Button>
+        <p>Hello World</p>
     </>
   )
 }

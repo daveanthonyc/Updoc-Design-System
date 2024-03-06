@@ -19,24 +19,24 @@ const BaseButton = forwardRef<HTMLButtonElement, BaseButtonProps>(
 
         const onClick = useCallback(
             (event: MouseEvent<HTMLButtonElement>) => {
-                onClickProp?.(event)
                 ref.current?.focus();
+                onClickProp?.(event)
         }, [ref, onClickProp]);
 
         return (
             <button 
-                type={type}
                 ref={mergeRefs([ref, forwardedRef])}
+                type={type}
                 onClick={onClick}
                 css={{
                     appearance: "none",
                     background: "transparent",
-                    border: "none",
                     cursor: "pointer",
+                    border: "none",
                     padding: 0,
+                    fontFamily: tokens.font.body,
                     fontSize: "inherit",
                     lineHeight: "inherit",
-                    fontFamily: tokens.font.body,
                 }}
                 {...props}
             />

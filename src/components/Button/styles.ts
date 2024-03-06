@@ -1,22 +1,23 @@
-import { css } from "@emotion/react"
 import { updocTheme } from "../../core/updocTheme";
 
 const variants = {
-    primary: css({
-        backgroundColor: 'blue'
-    }),
-    secondary: css({
+    primary: {
 
-    })
+    },
+    secondary: {
+
+    }
 }
 
 const sizes = {
-    sm: css({
-
-    }),
-    md: css({
-
-    })
+    sm: {
+        padding: '20px',
+        borderRadius: '9px'
+    },
+    md: {
+        padding: '30px',
+        borderRadius: '9px'
+    }
 }
 
 export type ButtonSize = keyof typeof sizes;
@@ -31,17 +32,6 @@ export function buttonStyles({
     variant?: ButtonVariant,
     size?: ButtonSize
 }) {
-    /*return css({
-        border: `1px solid ${updocTheme.lightAccent}`,
-        backgroundColor: updocTheme.lightAccent,
-        color: updocTheme.lightForegroundText,
-        appearance: 'none',
-        boxSizing: 'border-box',
-        position: 'relative',
-        display: block ? 'flex' : 'inline-flex',
-        ...variants[variant],
-        ...sizes[size]
-    })*/
     return {
         border: `1px solid ${updocTheme.lightAccent}`,
         backgroundColor: updocTheme.lightAccent,

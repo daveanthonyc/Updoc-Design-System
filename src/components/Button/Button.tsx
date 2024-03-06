@@ -11,7 +11,15 @@ type CommonButtonProps = {
 type ButtonProps = PropsWithChildren & BaseButtonProps & CommonButtonProps;
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-    function Button({children, onClick, block, variant, size, ...props}, forwardedRef) {
+    function Button({
+            children, 
+            onClick, 
+            block, 
+            variant, 
+            size, 
+            ...props
+        }, 
+        forwardedRef) {
 
         const styles = buttonStyles({block, variant, size});
 
@@ -19,8 +27,8 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
             <BaseButton 
                 onClick={onClick}
                 ref={forwardedRef}
-                {...props}
                 css={styles}
+                {...props}
                 >
                 <span>
                     <span>{children}</span>

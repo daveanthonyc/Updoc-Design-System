@@ -1,0 +1,9 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`should have hello world 1`] = `
+<div>
+  <button>
+    Testing
+  </button>
+</div>
+`;
